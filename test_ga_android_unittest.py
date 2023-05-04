@@ -30,6 +30,7 @@ class TestGaDemo(unittest.TestCase):
         os.system("adb shell am start com.EpicLRT.ActionRPGSample/com.epicgames.ue4.SplashActivity")
         time.sleep(10)
         ga = GAutomator(host="127.0.0.1", port=port)
+        time.sleep(3)
         ga.find_game_element(By.TEXT, "OPTIONS").click()
         ga.context = ga.UE_SLATE
         time.sleep(2)
